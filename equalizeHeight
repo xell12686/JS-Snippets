@@ -1,12 +1,12 @@
   	var equalizeHeightWithMiddleDiv = function() {
-		
+		var maxHeight = 0;
 		$(window).load(function(){
-      		//equalize with middle div
+      			//equalize with middle div
 				var divHeight = $('.equalize-heights .middle').outerHeight();
 				$('.equalize-heights .sibling').height(divHeight);
 				console.log("fx ran:" + divHeight);
 				var maxHeight = 0;
-      		//Equalize on all siblings to the tallest div
+      			//Equalize on all siblings to the tallest div
 				$(".equalize-heights .equalize").each(function(){
 				   if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
 				});
